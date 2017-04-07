@@ -1,0 +1,23 @@
+{
+  "name": "process-launcher”,
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/process_launcher.js",
+  "scripts": {
+    "build": "node ./node_modules/eslint/bin/eslint ./src/**",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Duncan Coutts",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io-client": "^1.7.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "bin": {
+    "launcher": "src/process_launcher.js"
+  }
+}
