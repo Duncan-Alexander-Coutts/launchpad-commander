@@ -1,9 +1,17 @@
 const socketInitialiser = require('../initialisation/socket-initialiser.js');
 
 const config = {
+  5: {
+    0: { target: 'dataset', command: './matters/import.sh' },
+  },
+  6: {
+    0: { target: 'server', command: 'grails run-app' },
+    1: { target: 'server', command: 'grails run-war' },
+  },
   7: {
     0: { target: 'client', command: 'grunt watch' },
-    1: { target: 'server', command: 'grails run-app' },
+    1: { target: 'client', command: 'grunt build' },
+    2: { target: 'client', command: 'grunt eslint' },
   },
 };
 
@@ -19,7 +27,6 @@ function handleMessage(message) {
 
   return undefined;
 }
-
 
 module.exports = {
   handleMessage,
