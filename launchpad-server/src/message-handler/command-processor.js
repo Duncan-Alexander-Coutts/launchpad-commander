@@ -1,31 +1,23 @@
 const socketInitialiser = require('../initialisation/socket-initialiser.js');
+const configService = require('../config/button-config-service.js');
 
-const config = {
-  5: {
-    0: { target: 'dataset', command: './matters/import.sh' },
-  },
-  6: {
-    0: { target: 'server', command: 'grails run-app' },
-    1: { target: 'server', command: 'grails run-war' },
-  },
-  7: {
-    0: { target: 'client', command: 'grunt watch' },
-    1: { target: 'client', command: 'grunt build' },
-    2: { target: 'client', command: 'grunt eslint' },
-  },
-};
 
 function getCommandObject(message) {
-  return config[message.row][message.column];
+  const config = configService.getConfig();
+  
+  if (config[message.row] && config[message.row][message.column]) {
+    return config[message.row][message.column];
+  }
+  return undefined;
 }
 
 function handleMessage(message) {
   const commandObject = getCommandObject(message);
-
+  
+  if (!commandObject) return;
+  
   console.log(`Emitting command to ${commandObject.target} with command ${commandObject.command}`);
   socketInitialiser.emit(commandObject);
-
-  return undefined;
 }
 
 module.exports = {
