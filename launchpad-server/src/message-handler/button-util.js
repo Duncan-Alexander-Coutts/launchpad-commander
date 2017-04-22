@@ -1,6 +1,10 @@
-const Velocity = {
-  FULL: 100,
-  MIN: 0,
+const Colours = {
+  RED: 15,
+  AMBER: 63,
+  GREEN: 60,
+  GREEN_LOW: 28,
+  YELLOW: 62,
+  OFF: 0,
 };
 
 const MessageStatus = {
@@ -16,12 +20,12 @@ function sendMessage(output, status, row, column, velocity) {
   output.sendMessage([status, midiNoteNumber, velocity]);
 }
 
-function turnOn(message, output) {
-  sendMessage(output, MessageStatus.ON, message.row, message.column, Velocity.FULL);
+function turnOn(message, output, colour) {
+  sendMessage(output, MessageStatus.ON, message.row, message.column, colour);
 }
 
 function turnOff(message, output) {
-  sendMessage(output, MessageStatus.ON, message.row, message.column, Velocity.MIN);
+  sendMessage(output, MessageStatus.ON, message.row, message.column, Colours.OFF);
 }
 
 function turnOffAll(output) {
@@ -33,6 +37,7 @@ function turnOffAll(output) {
 }
 
 module.exports = {
+  Colours,
   turnOn,
   turnOff,
   turnOffAll

@@ -1,5 +1,6 @@
 const buttonConfigService = require('../config/button-config-service.js');
 const buttonUtil = require('../message-handler/button-util.js');
+const colours = buttonUtil.Colours;
 
 function initialise(output) {
   
@@ -11,7 +12,9 @@ function initialise(output) {
     
     for (let columnKey in columnConfigElement) {
       console.log({row: rowKey, column: columnKey});
-      buttonUtil.turnOn({row: parseInt(rowKey), column: parseInt(columnKey)}, output);
+      buttonUtil.turnOn({row: parseInt(rowKey), column: parseInt(columnKey)},
+        output,
+        colours.GREEN_LOW);
     }
   }
 }

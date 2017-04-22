@@ -1,17 +1,19 @@
 const messageUtil = require('./message-util.js');
 const buttonUtil = require('./button-util.js');
 const commandProcessor = require('./command-processor.js');
+const buttonConfigService = require('../config/button-config-service');
+const colours = buttonUtil.Colours;
 
-function handleMessage(deltaTime, message, output) {
+function handleMessage(message, output) {
   const normalisedMessage = messageUtil.getNormalisedMessage(message);
-
-  if (normalisedMessage.velocity > 0) {
-    buttonUtil.turnOn(normalisedMessage, output);
-    //do something here to send the socket message
-    commandProcessor.handleMessage(normalisedMessage);
-
-  } else {
-    buttonUtil.turnOff(normalisedMessage, output);
+  
+  if (buttonConfigService.isButtonAssigned(normalisedMessage)) {
+    if (normalisedMessage.velocity > 0) {
+      buttonUtil.turnOn(normalisedMessage, output, colours.GREEN);
+      commandProcessor.handleMessage(normalisedMessage);
+    } else {
+      buttonUtil.turnOn(normalisedMessage, output, colours.GREEN_LOW);
+    }
   }
 }
 

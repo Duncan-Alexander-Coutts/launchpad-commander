@@ -23,8 +23,6 @@
 
   function contructMidiIOObject(midiIOObject) {
     midiIOObject.openPort(getLaunchpadPortNumber(midiIOObject));
-        // TODO Needs sorted
-        // midiIOObject.ignoreTypes(false, false, false);
   }
 
   module.exports = {

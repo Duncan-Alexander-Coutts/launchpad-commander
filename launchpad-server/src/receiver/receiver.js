@@ -11,7 +11,7 @@ function start() {
   buttonInitialiser.initialise(output);
 
   input.on('message', (deltaTime, message) => {
-    messageHandler.handleMessage(deltaTime, message, output);
+    messageHandler.handleMessage(message, output);
   });
 }
 
