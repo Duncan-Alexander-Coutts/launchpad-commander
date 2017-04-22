@@ -10,6 +10,7 @@ During development there a many commands that I use over and over. e.g.
 * running/re-starting server application
 * loading one of many data sets
 * fetching new changes from git
+* running unit and end-to-end tests
 
 the list goes on...
 
