@@ -4,25 +4,26 @@
   "description": "Launch macros from pressing buttons on Launchpad",
   "main": "main.js",
   "scripts": {
-    "build": "node ./node_modules/eslint/bin/eslint src"
+    "build": "node ./node_modules/eslint/bin/eslint 'src/**/*.js'"
   },
   "author": "Duncan Coutts",
   "license": "ISC",
   "dependencies": {
     "chalk": "^1.1.1",
+    "express": "^4.15.2",
     "midi": "^0.9.4",
     "socket.io": "^1.7.3",
-    "express": "^4.15.2"
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
     "eslint-config-airbnb-base": "^11.1.1",
-    "eslint-plugin-chai-friendly": "^0.2.0",
+    "eslint-plugin-chai-friendly": "^0.3.6",
     "eslint-plugin-import": "^2.2.0",
-    "istanbul": "^0.3.21",
+    "istanbul": "^0.4.5",
     "chai": "^3.2.0",
-    "mocha": "^2.3.2",
-    "mockery": "^1.4.0",
-    "sinon": "^1.16.1"
+    "mocha": "^3.2.0",
+    "mockery": "^2.0.0",
+    "sinon": "^2.1.0"
   }
 }

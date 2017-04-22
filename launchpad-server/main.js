@@ -1,2 +1,3 @@
-var receiver = require("./src/receiver/receiver.js");
+const receiver = require('./src/receiver/receiver.js');
+
 receiver.start();

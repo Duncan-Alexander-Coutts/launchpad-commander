@@ -1,22 +1,23 @@
 const app = require('express')();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
+const logger = require('../logger/logger.js');
 
 function initialise() {
   io.on('connection', (socket) => {
-    console.log('a user connected');
+    logger.info('a user connected');
 
     socket.on('CH01', (msg) => {
-      console.log(`message: ${msg}`);
+      logger.info(`message: ${msg}`);
     });
 
     socket.on('disconnect', () => {
-      console.log('user disconnected');
+      logger.info('user disconnected');
     });
   });
 
   http.listen(3000, () => {
-    console.log('listening on *:3000');
+    logger.info('listening on *:3000');
   });
 }
 

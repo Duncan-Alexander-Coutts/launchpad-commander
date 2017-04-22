@@ -1,17 +1,16 @@
 const config = require('./config.json');
+const objectUtil = require('../util/object-util.js');
 
 function getConfig() {
   return config;
 }
 
 function isButtonAssigned(normalisedMessage) {
-  const config = getConfig();
-  
-  return config.hasOwnProperty(normalisedMessage.row) &&
-    config[normalisedMessage.row].hasOwnProperty(normalisedMessage.column);
+  return objectUtil.hasProperty(getConfig(), normalisedMessage.row) &&
+    objectUtil.hasProperty(getConfig()[normalisedMessage.row], normalisedMessage.column);
 }
 
 module.exports = {
   getConfig,
-  isButtonAssigned
+  isButtonAssigned,
 };

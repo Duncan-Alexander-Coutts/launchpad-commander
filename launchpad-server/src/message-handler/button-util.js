@@ -29,9 +29,9 @@ function turnOff(message, output) {
 }
 
 function turnOffAll(output) {
-  for (let rowIndex = 0; rowIndex < 8; rowIndex++) {
-    for (let columnIndex = 0; columnIndex < 8; columnIndex++) {
-      turnOff({row: rowIndex, column: columnIndex}, output);
+  for (let rowIndex = 0; rowIndex < 8; rowIndex += 1) {
+    for (let columnIndex = 0; columnIndex < 8; columnIndex += 1) {
+      turnOff({ row: rowIndex, column: columnIndex }, output);
     }
   }
 }
@@ -40,5 +40,5 @@ module.exports = {
   Colours,
   turnOn,
   turnOff,
-  turnOffAll
+  turnOffAll,
 };
