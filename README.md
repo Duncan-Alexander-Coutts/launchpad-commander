@@ -11,9 +11,7 @@ During development there a many commands that I use over and over. e.g.
 
 the list goes on...
 
-[[/readme-assets/lit-buttons.jpg|alt=octocat]]
-
-![alt tag](/readme-assets/lit-buttons.jpg)
+![alt tag](/readme-assets/lit-buttons.jpg =100x20)
 
 I often have multiple terminal windows open to execute these commands like below...
 ### Problem - Breaking my workflow
