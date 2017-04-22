@@ -1,6 +1,8 @@
 # launchpad-macro-receiver
 Launch macros from pressing buttons on Launchpad
 
+![lit launchpad buttons](/readme-assets/lit-buttons.jpg)
+
 ### Purpose
 
 During development there a many commands that I use over and over. e.g.
@@ -10,8 +12,6 @@ During development there a many commands that I use over and over. e.g.
 * fetching new changes from git
 
 the list goes on...
-
-![lit launchpad buttons](/readme-assets/lit-buttons.jpg)
 
 I often have multiple terminal windows open to execute these commands like below...
 ### Problem - Breaking my workflow
