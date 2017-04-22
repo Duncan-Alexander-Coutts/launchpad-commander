@@ -13,6 +13,8 @@ the list goes on...
 
 [[/readme-assets/lit-buttons.jpg|alt=octocat]]
 
+![alt tag](/readme-assets/lit-buttons.jpg)
+
 I often have multiple terminal windows open to execute these commands like below...
 ### Problem - Breaking my workflow
 
