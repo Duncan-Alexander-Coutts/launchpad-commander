@@ -11,7 +11,6 @@ function initialise(output) {
     let columnConfigElement = buttonConfiguration[rowKey];
     
     for (let columnKey in columnConfigElement) {
-      console.log({row: rowKey, column: columnKey});
       buttonUtil.turnOn({row: parseInt(rowKey), column: parseInt(columnKey)},
         output,
         colours.GREEN_LOW);

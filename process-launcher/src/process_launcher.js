@@ -26,11 +26,9 @@ function start(identifier) {
   }
 
   socket.on(identifier, (data) => {
-    console.log(child);
     if (child) {
       child.kill('SIGINT');
     }
-    console.log(data);
 
     const slicedCommand = data.split(' ');
     const mainCommand = slicedCommand[0];

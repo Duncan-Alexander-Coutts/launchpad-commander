@@ -13,6 +13,10 @@
     "1": {
       "target": "server",
       "command": "grails run-war"
+    },
+    "2": {
+      "target": "server",
+      "command": "grails run-war -Dgrails.env=productionTest"
     }
   },
   "7": {

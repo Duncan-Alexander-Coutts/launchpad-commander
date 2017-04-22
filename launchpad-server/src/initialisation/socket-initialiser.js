@@ -21,7 +21,6 @@ function initialise() {
 }
 
 function emit(commandObject) {
-  console.log(commandObject);
   io.emit(commandObject.target, commandObject.command);
 }
 
