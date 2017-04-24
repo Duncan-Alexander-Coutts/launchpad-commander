@@ -1,4 +1,10 @@
 {
+  "4": {
+    "0": {
+      "target": "ats",
+      "command": "grunt acceptancetests"
+    }
+  },
   "5": {
     "0": {
       "target": "dataset",
