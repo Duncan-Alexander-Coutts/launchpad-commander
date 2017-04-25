@@ -1,4 +1,5 @@
 # launchpad-macro-receiver
+[![Build Status](https://travis-ci.org/Duncan-Alexander-Coutts/launchpad-commander.svg?branch=master)](https://travis-ci.org/Duncan-Alexander-Coutts/launchpad-commander)
 Launch macros from pressing buttons on Launchpad
 
 ![lit launchpad buttons](/readme-assets/lit-buttons.jpg)
