@@ -1,5 +1,5 @@
 # launchpad-macro-receiver
-[![Build Status](https://travis-ci.org/Duncan-Alexander-Coutts/launchpad-commander.svg?branch=master)](https://travis-ci.org/Duncan-Alexander-Coutts/launchpad-commander)
+[![Coverage Status](https://coveralls.io/repos/github/Duncan-Alexander-Coutts/launchpad-commander/badge.svg?branch=master)](https://coveralls.io/github/Duncan-Alexander-Coutts/launchpad-commander?branch=master)[![Build Status](https://travis-ci.org/Duncan-Alexander-Coutts/launchpad-commander.svg?branch=master)](https://travis-ci.org/Duncan-Alexander-Coutts/launchpad-commander)
 
 Launch macros from pressing buttons on Launchpad
 
