@@ -5,4 +5,5 @@ node_js:
 env:
   - TEST_DIR=launchpad-server
   - TEST_DIR=process-launcher
+before_script: ./build/install_dependencies.sh
 script: cd $TEST_DIR && npm install && npm test

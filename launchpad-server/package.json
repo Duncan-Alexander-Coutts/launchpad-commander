@@ -4,8 +4,8 @@
   "description": "Launch macros from pressing buttons on Launchpad",
   "main": "main.js",
   "scripts": {
-    "build": "node ./node_modules/eslint/bin/eslint 'src/**/*.js' && node ./node_modules/eslint/bin/eslint 'test/**/*.js' && node ./node_modules/mocha/bin/mocha 'test/**/*.spec.js'",
-    "test": "node ./node_modules/eslint/bin/eslint 'src/**/*.js' && node ./node_modules/eslint/bin/eslint 'test/**/*.js' && node ./node_modules/mocha/bin/mocha 'test/**/*.spec.js'"
+    "build": "./scripts/build.sh",
+    "test": "./scripts/build.sh"
   },
   "author": "Duncan Coutts",
   "license": "ISC",
